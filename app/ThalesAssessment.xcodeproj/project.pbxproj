@@ -19,6 +19,7 @@
 		8FCDFAA55A21C08DE6CDB1E7 /* HashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B2957AC63F8ECA6E22243D /* HashTests.swift */; };
 		A347E87499DB3AF884B3D82F /* Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E96199E4584C3AF340E46 /* Hex.swift */; };
 		B2D4E04A7680B644B251C17F /* ThalesAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C7C1B0B94A18537538B26 /* ThalesAssessmentApp.swift */; };
+		BA511B260110FF9A79288686 /* PEMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F94C3E4A5442F0D8EF9CAF /* PEMTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		8A0D785F95CFACF05C5EEBC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A8B4285FFFF902F76F3D187E /* DERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DERTests.swift; sourceTree = "<group>"; };
 		A99D78649D3A98523011305D /* ECDSATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECDSATests.swift; sourceTree = "<group>"; };
+		B9F94C3E4A5442F0D8EF9CAF /* PEMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PEMTests.swift; sourceTree = "<group>"; };
 		D81FEFD0E49FA561ED40C830 /* HashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashView.swift; sourceTree = "<group>"; };
 		E083CB3F9B341F2399200201 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F1C64B9AA68D0057F004F1E0 /* DER.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DER.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				A99D78649D3A98523011305D /* ECDSATests.swift */,
 				22B2957AC63F8ECA6E22243D /* HashTests.swift */,
 				FFF8CE23D465412230860E9C /* HexTests.swift */,
+				B9F94C3E4A5442F0D8EF9CAF /* PEMTests.swift */,
 			);
 			path = ThalesAssessmentTests;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				41B7504A4CA8DF8D3085F86E /* ECDSATests.swift in Sources */,
 				8FCDFAA55A21C08DE6CDB1E7 /* HashTests.swift in Sources */,
 				31E5CDCF02F7294D01675E1C /* HexTests.swift in Sources */,
+				BA511B260110FF9A79288686 /* PEMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
