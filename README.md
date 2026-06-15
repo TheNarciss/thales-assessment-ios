@@ -1,103 +1,124 @@
-# iOS — Thales Assessment (Assignment 2)
+# Thales assessment — iOS
 
-Native iOS client for the same FastAPI backend that serves the web app
-in `../app/backend/`. Same parity-testing intent: signatures and hashes
-produced by Apple's CryptoKit are verified against the backend's
-`cryptography` (OpenSSL) implementation over real HTTP.
+ECDSA P-256 sign/verify and SHA-256 hashing demo, native iOS, built
+with Swift, SwiftUI, and CryptoKit. Self-contained: no backend, no
+network calls.
 
-## Requirements
+Assignment 2 of 2 of the Thales Singapore AI Innovation Engineer
+take-home. Companion web app:
+https://github.com/TheNarciss/thales-assessment-web
 
-- macOS with Xcode 15 or later
-- xcodegen (`brew install xcodegen`)
-- The backend container running (see project root README)
+![CI](https://github.com/TheNarciss/thales-assessment-ios/actions/workflows/ci.yml/badge.svg)
 
-## First-time setup
+## Run
 
-From the repo root:
+Requires macOS with Xcode 16+ and `xcodegen`.
+brew install xcodegen
 
-    cd ios
-    xcodegen generate
-    open ThalesAssessment.xcodeproj
+cd app
 
-In another terminal, start the backend:
+xcodegen generate
 
-    cd ..
-    docker compose up -d backend
-    curl http://localhost:8000/api/health
+open ThalesAssessment.xcodeproj
 
-## Build and run
+In Xcode: select an iPhone simulator (any iOS 17+), press ⌘R.
 
-In Xcode: select an iPhone simulator, press ⌘R.
+The app has three tabs:
 
-`Info.plist` whitelists `NSAllowsLocalNetworking` so the simulator can
-reach `http://localhost:8000` without TLS. Physical devices would need a
-LAN IP and either a tunnel or LAN-allowed ATS exception; not in scope
-for this PoC.
+- **Hash**: type, see the SHA-256 digest and a 7×7 identicon update
+  live (300 ms debounce).
+- **Keys**: generate or import a P-256 keypair, toggle between hex
+  and PEM display, reveal the private scalar behind a tap gate.
+  Import opens a sheet for pasting a PKCS#8 PEM.
+- **Sign**: sign the current message with the loaded keypair, see
+  both raw P1363 and DER ASN.1 forms in hex, tamper a byte and
+  watch verification flip, reset, repeat.
 
 ## Tests
+cd app
 
-In Xcode: ⌘U.
+xcodebuild test 
 
-Or from the command line:
+-scheme ThalesAssessment 
 
-    xcodebuild test \
-      -project ThalesAssessment.xcodeproj \
-      -scheme ThalesAssessment \
-      -destination 'platform=iOS Simulator,name=iPhone 15'
+-destination 'platform=iOS Simulator,name=iPhone 17'
 
-## Layout
+Or in Xcode: ⌘U.
 
-    ThalesAssessment/
-    ├── ThalesAssessmentApp.swift   # entry point
-    ├── ContentView.swift           # three stacked cards
-    ├── Info.plist                  # ATS exception for localhost
-    ├── Views/
-    │   ├── Card.swift              # shared titled-card wrapper
-    │   ├── HashView.swift
-    │   ├── KeysView.swift
-    │   └── SignVerifyView.swift
-    ├── Crypto/
-    │   ├── Hex.swift               # encode/decode, strict
-    │   └── DER.swift               # raw ⇄ DER, strict, mirrors der.ts
-    └── API/
-        ├── APIClient.swift         # URLSession + 5s timeout
-        └── DTOs.swift              # Codable types for the 3 endpoints
+Expected: `Executed 38 tests, with 0 failures` across Hex (9), DER
+(10), SHA-256 KAT (5), ECDSA (6), PEM (8).
 
-    ThalesAssessmentTests/
-    ├── HexTests.swift              # encode/decode + error cases
-    ├── DERTests.swift              # encode/decode + strict acceptance set
-    ├── HashTests.swift             # FIPS 180-4 KATs via CryptoKit
-    └── ECDSATests.swift            # sign/verify + tamper + DER roundtrip
+## Repo layout
+app/
 
-## Backend reuse
+├── ThalesAssessment/             # app source
 
-Zero changes. The iOS client speaks the same `/api/hash`,
-`/api/verify`, and `/api/sign-test-vector` endpoints as the web client,
-with hex on the wire so byte-exact testing (NFC vs NFD `é`) works
-identically across both clients.
+│   ├── ThalesAssessmentApp.swift   # entry point
 
-## Threat model
+│   ├── ContentView.swift           # TabView with three tabs
 
-Inherits the same model as the web app (see
-`../specs/tech-spec.md#threat-model`). Notable differences specific to
-iOS:
+│   ├── Info.plist
 
-- The private key lives in app-process memory only; it is not stored
-  in the Keychain. A real client would Keychain-store with appropriate
-  access controls.
-- ATS is relaxed only for local networking. Production deployments
-  would target HTTPS and remove the relaxation entirely.
-- CryptoKit handles constant-time operations on key material; we do
-  not reach below the framework.
+│   ├── Crypto/
 
-## Architecture
+│   │   ├── Hex.swift             # strict hex encode/decode
 
-The iOS app is **self-contained**: CryptoKit handles all crypto locally and
-the app has zero network code. No backend or internet connection is required
-at any point.
+│   │   └── DER.swift             # strict raw <-> DER converter
 
-This is intentional. The mobile assignment's "No network dependency required"
-constraint is satisfied literally. Cross-stack agreement with the FastAPI
-backend (web Assignment 1) is proven at *test time* via shared NIST CAVP and
-FIPS 180-4 known-answer vectors in `ThalesAssessmentTests/`, not at *demo
-time* via a network round-trip.
+│   └── Views/
+
+│       ├── HashView.swift
+
+│       ├── KeysView.swift        # generate, display, import
+
+│       ├── SignVerifyView.swift  # sign, tamper, verify
+
+│       └── HashIdenticon.swift   # 7×7 deterministic visual
+
+├── ThalesAssessmentTests/        # 38 XCTest cases
+
+│   ├── HexTests.swift
+
+│   ├── DERTests.swift
+
+│   ├── HashTests.swift           # FIPS 180-4 KATs via CryptoKit
+
+│   ├── ECDSATests.swift          # roundtrip / tamper / wrong-key
+
+│   └── PEMTests.swift            # PKCS#8 + SPKI round-trip
+
+├── ThalesAssessment.xcodeproj/   # generated from project.yml
+
+└── project.yml                   # xcodegen source of truth
+specs/
+
+├── requirements.md               # FR-1 to FR-6, NFR, out of scope
+
+├── tech-spec.md                  # architecture, threat model, AI workflow
+
+└── verification.md               # test layers, what each covers
+.github/workflows/ci.yml          # xcodebuild test on macos-15
+
+## Where to look first
+
+If you have 5 minutes: read `specs/tech-spec.md`. It explains why
+this app exists in its current shape — why no backend, why a
+strict DER converter, why the identicon, what was scoped out (an
+HTTP client to the web's FastAPI was prototyped and rejected).
+
+If you have 15 minutes: open the project in Xcode, generate a
+keypair, sign a message, tap Tamper, then read
+`specs/verification.md` to see the test matrix.
+
+## No network
+
+Unlike the companion web app, this iOS app has no network layer:
+no `URLSession`, no analytics, no telemetry. CryptoKit handles all
+crypto locally. The mobile assignment's "No network dependency
+required" constraint is satisfied literally.
+
+Cross-stack agreement with the web app's FastAPI backend is proven
+at test time via shared NIST CAVP and FIPS 180-4 known-answer
+vectors, not at demo time via a network round-trip. See
+`specs/tech-spec.md` section "Why no backend on iOS" for the full
+argument.
