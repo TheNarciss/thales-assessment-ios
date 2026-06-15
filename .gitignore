@@ -1,0 +1,23 @@
+# Xcode user-specific
+**/xcuserdata/
+**/*.xcuserstate
+**/.DS_Store
+
+# Xcode build output (the .xcodeproj itself IS committed when xcodegen is used,
+# but if you prefer to regenerate it on demand, uncomment the line below.)
+# *.xcodeproj/
+
+# Derived data + build artifacts
+build/
+DerivedData/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+
+# Carthage / CocoaPods (not used here, but commonly listed)
+Pods/
+Carthage/Build/

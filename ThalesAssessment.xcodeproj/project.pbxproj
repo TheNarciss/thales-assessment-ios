@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		006AAA3D4A58B2BD3083A82E /* SignVerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350DA769051F57474BEE3BD3 /* SignVerifyView.swift */; };
+		062A536767B7AB04A03E8FC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E083CB3F9B341F2399200201 /* ContentView.swift */; };
+		09F46959FB1D397769DACE18 /* HashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81FEFD0E49FA561ED40C830 /* HashView.swift */; };
+		12BEE3D0467A42DDF4575949 /* DERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B4285FFFF902F76F3D187E /* DERTests.swift */; };
+		12F9A323F1043C9905C2C516 /* KeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184AE3C4AEE669D7795EBE14 /* KeysView.swift */; };
+		28986145263610FFC3D33885 /* DER.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C64B9AA68D0057F004F1E0 /* DER.swift */; };
+		31E5CDCF02F7294D01675E1C /* HexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF8CE23D465412230860E9C /* HexTests.swift */; };
+		41B7504A4CA8DF8D3085F86E /* ECDSATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99D78649D3A98523011305D /* ECDSATests.swift */; };
+		8F57ADA7D002FCE12C51A94A /* HashIdenticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CEC65D9EF4BA51A68D2CA2 /* HashIdenticon.swift */; };
+		8FCDFAA55A21C08DE6CDB1E7 /* HashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B2957AC63F8ECA6E22243D /* HashTests.swift */; };
+		A347E87499DB3AF884B3D82F /* Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47E96199E4584C3AF340E46 /* Hex.swift */; };
+		B2D4E04A7680B644B251C17F /* ThalesAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0C7C1B0B94A18537538B26 /* ThalesAssessmentApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		069EC6CED82FF111CF342528 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1DF0BDE61B60181F409D8AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1424A14A744627D9902523CB;
+			remoteInfo = ThalesAssessment;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00CEC65D9EF4BA51A68D2CA2 /* HashIdenticon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashIdenticon.swift; sourceTree = "<group>"; };
+		184AE3C4AEE669D7795EBE14 /* KeysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysView.swift; sourceTree = "<group>"; };
+		22B2957AC63F8ECA6E22243D /* HashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTests.swift; sourceTree = "<group>"; };
+		350DA769051F57474BEE3BD3 /* SignVerifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignVerifyView.swift; sourceTree = "<group>"; };
+		3E0C7C1B0B94A18537538B26 /* ThalesAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThalesAssessmentApp.swift; sourceTree = "<group>"; };
+		58D86B77429347A24F90956C /* ThalesAssessment.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ThalesAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81588E9664ADBCCF85FF1A0E /* ThalesAssessmentTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ThalesAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A0D785F95CFACF05C5EEBC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A8B4285FFFF902F76F3D187E /* DERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DERTests.swift; sourceTree = "<group>"; };
+		A99D78649D3A98523011305D /* ECDSATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECDSATests.swift; sourceTree = "<group>"; };
+		D81FEFD0E49FA561ED40C830 /* HashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashView.swift; sourceTree = "<group>"; };
+		E083CB3F9B341F2399200201 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F1C64B9AA68D0057F004F1E0 /* DER.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DER.swift; sourceTree = "<group>"; };
+		F47E96199E4584C3AF340E46 /* Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hex.swift; sourceTree = "<group>"; };
+		FFF8CE23D465412230860E9C /* HexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2E77A9D5311F5AF4A5797C0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00CEC65D9EF4BA51A68D2CA2 /* HashIdenticon.swift */,
+				D81FEFD0E49FA561ED40C830 /* HashView.swift */,
+				184AE3C4AEE669D7795EBE14 /* KeysView.swift */,
+				350DA769051F57474BEE3BD3 /* SignVerifyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3D6A6DABC327F6AE8846E3A7 = {
+			isa = PBXGroup;
+			children = (
+				6EF7EB04A69C9BDD5E7E2C72 /* ThalesAssessment */,
+				EFBA4007BF05ABE14173463D /* ThalesAssessmentTests */,
+				D34B8B67436C1E445309CB57 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6EF7EB04A69C9BDD5E7E2C72 /* ThalesAssessment */ = {
+			isa = PBXGroup;
+			children = (
+				E083CB3F9B341F2399200201 /* ContentView.swift */,
+				8A0D785F95CFACF05C5EEBC5 /* Info.plist */,
+				3E0C7C1B0B94A18537538B26 /* ThalesAssessmentApp.swift */,
+				C6B0EEEBF595BFF3780634B8 /* Crypto */,
+				2E77A9D5311F5AF4A5797C0C /* Views */,
+			);
+			path = ThalesAssessment;
+			sourceTree = "<group>";
+		};
+		C6B0EEEBF595BFF3780634B8 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				F1C64B9AA68D0057F004F1E0 /* DER.swift */,
+				F47E96199E4584C3AF340E46 /* Hex.swift */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		D34B8B67436C1E445309CB57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58D86B77429347A24F90956C /* ThalesAssessment.app */,
+				81588E9664ADBCCF85FF1A0E /* ThalesAssessmentTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFBA4007BF05ABE14173463D /* ThalesAssessmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				A8B4285FFFF902F76F3D187E /* DERTests.swift */,
+				A99D78649D3A98523011305D /* ECDSATests.swift */,
+				22B2957AC63F8ECA6E22243D /* HashTests.swift */,
+				FFF8CE23D465412230860E9C /* HexTests.swift */,
+			);
+			path = ThalesAssessmentTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1424A14A744627D9902523CB /* ThalesAssessment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8782A34ED254A864100969E9 /* Build configuration list for PBXNativeTarget "ThalesAssessment" */;
+			buildPhases = (
+				43802CC6CFC60F6F0B2BA595 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThalesAssessment;
+			packageProductDependencies = (
+			);
+			productName = ThalesAssessment;
+			productReference = 58D86B77429347A24F90956C /* ThalesAssessment.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E8E621535ED5B60E9EC61E5C /* ThalesAssessmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 571559D862DD864EEF59E068 /* Build configuration list for PBXNativeTarget "ThalesAssessmentTests" */;
+			buildPhases = (
+				415DB047D137C05177E2261B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F932B1EFE858ADE75A1B51DF /* PBXTargetDependency */,
+			);
+			name = ThalesAssessmentTests;
+			packageProductDependencies = (
+			);
+			productName = ThalesAssessmentTests;
+			productReference = 81588E9664ADBCCF85FF1A0E /* ThalesAssessmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1DF0BDE61B60181F409D8AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 101ACD4F001D069724819470 /* Build configuration list for PBXProject "ThalesAssessment" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 3D6A6DABC327F6AE8846E3A7;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D34B8B67436C1E445309CB57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1424A14A744627D9902523CB /* ThalesAssessment */,
+				E8E621535ED5B60E9EC61E5C /* ThalesAssessmentTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		415DB047D137C05177E2261B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12BEE3D0467A42DDF4575949 /* DERTests.swift in Sources */,
+				41B7504A4CA8DF8D3085F86E /* ECDSATests.swift in Sources */,
+				8FCDFAA55A21C08DE6CDB1E7 /* HashTests.swift in Sources */,
+				31E5CDCF02F7294D01675E1C /* HexTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43802CC6CFC60F6F0B2BA595 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				062A536767B7AB04A03E8FC0 /* ContentView.swift in Sources */,
+				28986145263610FFC3D33885 /* DER.swift in Sources */,
+				8F57ADA7D002FCE12C51A94A /* HashIdenticon.swift in Sources */,
+				09F46959FB1D397769DACE18 /* HashView.swift in Sources */,
+				A347E87499DB3AF884B3D82F /* Hex.swift in Sources */,
+				12F9A323F1043C9905C2C516 /* KeysView.swift in Sources */,
+				006AAA3D4A58B2BD3083A82E /* SignVerifyView.swift in Sources */,
+				B2D4E04A7680B644B251C17F /* ThalesAssessmentApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F932B1EFE858ADE75A1B51DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1424A14A744627D9902523CB /* ThalesAssessment */;
+			targetProxy = 069EC6CED82FF111CF342528 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		089CFB79C2F6C1B05E2C7CC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		458CE033159911977EC0DADE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = ThalesAssessment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thenarciss.thales;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4CEA756769A4F2320C7D1CAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5ED031F278F8A1547033DD25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = ThalesAssessment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thenarciss.thales;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		995D5C25115BA5314251CCE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thenarciss.thales.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThalesAssessment.app/ThalesAssessment";
+			};
+			name = Debug;
+		};
+		EE085870EFD2FCEBE58EB176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thenarciss.thales.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThalesAssessment.app/ThalesAssessment";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		101ACD4F001D069724819470 /* Build configuration list for PBXProject "ThalesAssessment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CEA756769A4F2320C7D1CAC /* Debug */,
+				089CFB79C2F6C1B05E2C7CC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		571559D862DD864EEF59E068 /* Build configuration list for PBXNativeTarget "ThalesAssessmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				995D5C25115BA5314251CCE7 /* Debug */,
+				EE085870EFD2FCEBE58EB176 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8782A34ED254A864100969E9 /* Build configuration list for PBXNativeTarget "ThalesAssessment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ED031F278F8A1547033DD25 /* Debug */,
+				458CE033159911977EC0DADE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E1DF0BDE61B60181F409D8AB /* Project object */;
+}
